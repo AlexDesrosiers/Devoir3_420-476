@@ -1,0 +1,43 @@
+﻿@{
+
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Page d'acceuil et de connection.</h2>
+</div>
+
+
+
+
+@using (Html.BeginForm("Index", "Home"))
+{
+    <table>
+        <tr>
+            <td>
+                Identifiant
+            </td>
+            <td>
+                <input id="id" type="text" required name="id" value="@ViewBag.Name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mot de Passe
+            </td>
+            <td>
+                <input id="psw" type="password" required name="psw" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="rememberme" type="checkbox" name="rememberme" value="yes" @ViewBag.CheckBoxValue /> Se souvenir de moi
+            </td>
+            <td>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp<input id="connexion" type="submit" value="Connexion" />
+            </td>
+        </tr>
+     
+
+    </table>
+}
